@@ -1,13 +1,7 @@
-import express, { Express, Request, Response } from 'express'
-import logger from './logger'
-const app: Express = express()
+import app from './src/app'
 
-const port = 8000
-
-app.get('/', (req: Request, res: Response) => {
-  res.send('KF backend test case')
-})
+const port = 3000
 
 app.listen(port, () => {
-  logger.info('Listening on port ' + port)
+  console.log(`Server listening on port ${port}`)
 })
